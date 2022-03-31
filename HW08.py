@@ -4,14 +4,19 @@
 """
 
 
-def razr(t):
+def razr(t, a=[], b=[]):
     x = [int(a) for a in str(t)]
     if len(x) == 3:
         print(t, "- Трехзначное число")
+        a.append(1)
     elif len(x) == 2:
         print(t, "- Двузначное число")
+        b.append(1)
     else:
         print(t, "- Не определено")
+
+    print(len(a), "Трехзначных")
+    print(len(b), "Двузначных")
 
 
 def func(*args):
@@ -19,4 +24,4 @@ def func(*args):
         razr(i)
 
 
-func(1, 123, 23, 4321, 561)
+func(1, 123, 23, 4321, 561, 444)
